@@ -1,0 +1,76 @@
+header {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  padding: 10px 0;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+}
+
+.openMenuIconContainer {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translate(0%, -50%);
+}
+
+.openMenuIcon {
+  width: 30px;
+  color: rgb(65, 65, 65);
+}
+
+.logoContainer {
+  width: 70px;
+}
+
+.logo {
+  width: 100%;
+}
+
+@media (width >= 768px) {
+  header {
+    padding: 20px 0;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
+  }
+  .openMenuIconContainer {
+    left: 30px;
+  }
+  .openMenuIcon {
+    width: 40px;
+  }
+  .logoContainer {
+    width: 110px;
+  }
+}
+@media (width >= 992px) {
+  header {
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 2000px;
+    margin: auto;
+  }
+  .openMenuIconContainer {
+    display: none;
+  }
+  .logoContainer {
+    width: 70px;
+  }
+}
+@media (width >= 1200px) {
+  header {
+    padding: 15px 120px;
+  }
+  .logoContainer {
+    width: 80px;
+  }
+}/*# sourceMappingURL=Header.module.css.map */

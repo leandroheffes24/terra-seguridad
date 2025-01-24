@@ -1,0 +1,56 @@
+.desktopNav {
+  display: none;
+}
+
+@media (width >= 992px) {
+  .desktopNav {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    gap: 15px;
+  }
+  .contactSection {
+    text-align: right;
+  }
+  .contactText {
+    color: rgb(35, 90, 209);
+    font-size: 0.9rem;
+  }
+  .contactPhone {
+    color: rgb(40, 40, 40);
+  }
+  .list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+  }
+  .itemLink {
+    color: rgb(35, 90, 209);
+    font-weight: 600;
+    position: relative;
+  }
+  .itemLink::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: rgb(35, 90, 209);
+    transition: width 0.2s ease-out;
+  }
+  .itemLink:hover::after {
+    width: 100%;
+  }
+}
+@media (width >= 1200px) {
+  .desktopNav {
+    gap: 20px;
+  }
+  .contactText {
+    font-size: 0.95rem;
+  }
+  .itemLink {
+    font-size: 1rem;
+  }
+}/*# sourceMappingURL=DesktopNav.module.css.map */

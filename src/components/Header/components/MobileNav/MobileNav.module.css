@@ -1,0 +1,75 @@
+.mobileNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 100vh;
+  background-color: white;
+  box-shadow: 0 0 0 5000px rgba(0, 0, 0, 0.4);
+  padding: 20px 15px;
+}
+
+.closeMenuIconContainer {
+  margin-bottom: 30px;
+  display: flex;
+}
+
+.closeMenuIcon {
+  width: 27px;
+  color: rgb(65, 65, 65);
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.itemLink {
+  color: rgb(35, 90, 209);
+  font-size: 1.2rem;
+}
+
+.navSeparator {
+  background-color: rgb(235, 235, 235);
+  width: 100%;
+  height: 2px;
+  margin: 50px 0;
+}
+
+.navInformation {
+  font-size: 0.95rem;
+}
+
+.navInformationPhone {
+  font-size: 0.9rem;
+}
+
+@media (width >= 768px) {
+  .mobileNav {
+    width: 60%;
+    padding: 40px 35px;
+  }
+  .closeMenuIconContainer {
+    margin-bottom: 55px;
+  }
+  .closeMenuIcon {
+    width: 40px;
+  }
+  .list {
+    gap: 40px;
+  }
+  .itemLink {
+    font-size: 1.5rem;
+  }
+  .navSeparator {
+    margin: 90px 0;
+  }
+  .navInformation {
+    font-size: 1.3rem;
+  }
+  .navInformationPhone {
+    font-size: 1.2rem;
+  }
+}/*# sourceMappingURL=MobileNav.module.css.map */

@@ -1,0 +1,68 @@
+@import '../../../../assets/styles/variables.scss';
+
+.desktopNav{
+    display: none;
+}
+
+@media(width>=992px){
+    .desktopNav{
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        gap: 15px;
+    }
+
+    .contactSection{
+        text-align: right;
+    }
+
+    .contactText{
+        color: $azul;
+        font-size: .9rem;
+    }
+
+    .contactPhone{
+        color: $textColor;
+    }
+
+    .list{
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .itemLink{
+        color: $azul;
+        font-weight: 600;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: $azul;
+            transition: width 0.2s ease-out;
+        }
+    
+        &:hover::after {
+            width: 100%;
+        }
+    }
+}
+
+@media(width>=1200px){
+    .desktopNav{
+        gap: 20px;
+    }
+
+    .contactText{
+        font-size: .95rem;
+    }
+
+    .itemLink{
+        font-size: 1rem;
+    }
+}
