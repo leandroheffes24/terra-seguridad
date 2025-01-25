@@ -1,0 +1,82 @@
+@import '../../assets/styles/variables.scss';
+
+footer{
+    background-color: $azul;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 30px;
+    color: white;
+}
+
+.footerSectionName{
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.footerList{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footerListItem{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footerItemLink{
+    font-size: .95rem;
+    color: white;
+}
+
+.footerContactLogo{
+    width: 20px;
+}
+
+.footerContactText{
+    font-size: .95rem;
+}
+
+.footerLogoSection{
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.logo{
+    width: 50%;
+}
+
+.separator{
+    background-color: rgb(24, 74, 180);
+    height: 2px;
+    width: 100%;
+    margin-top: -20px;
+
+}
+
+.footerDeveloperAndCopyright{
+    text-align: center;
+    margin-top: -20px;
+    color: rgb(220, 220, 220);
+    font-weight: 500;
+}
+
+.copyrightText{
+    font-size: .8rem;
+    margin-bottom: 20px;
+}
+
+.developerText{ 
+    font-size: .75rem;
+}
+
+.developerLink{
+    color: rgb(220, 220, 220);
+    font-weight: 700;
+    text-decoration: underline;
+}
