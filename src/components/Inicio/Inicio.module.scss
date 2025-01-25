@@ -4,8 +4,9 @@
     background-image: url('../../assets/background.webp');
     background-size: cover;
     background-position: center;
+    padding: 20px;
     height: 80vh;
-    padding: 20px 30px;
+    max-height: 650px;
 }
 
 .textoContainer{
@@ -22,4 +23,237 @@
     color: $azul;
     font-weight: 800;
     font-size: 1.6rem;
+}
+
+.formContainer{
+    margin-top: 250px;
+    box-shadow: 0 0 7px 0 rgba(0,0,0,0.2);
+}
+
+.formTextContainer{
+    background: linear-gradient(90deg, rgba(35,90,209,1) 0%, rgba(107,255,172,1) 100%);
+    padding: 20px;
+    text-align: center;
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.formTopText{
+    font-size: 1.7rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.formBottomText{
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.7;
+}
+
+.form{
+    background-color: white;
+    padding: 20px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 25px;
+    justify-content: space-between;
+}
+
+.formLabelAndInputContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+
+.areaCodeContainer{
+    width: 48%;
+}
+
+.phoneContainer{
+    width: 48%;
+}
+
+.formSubmitButton{
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 12px;
+    border: none;
+    background: linear-gradient(90deg, rgba(35,90,209,1) 0%, rgba(107,255,172,1) 100%);
+    color: white;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+@media(width>=768px){
+    .inicioSection{
+        padding: 40px;
+    }
+    
+    .text, .title{
+        font-size: 2rem;
+    }
+    
+    .title{
+        font-size: 2.2rem;
+    }
+    
+    .formContainer{
+        width: 80%;
+        margin: 250px auto 0;
+    }
+    
+    .formTextContainer{
+        padding: 40px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+    
+    .formTopText{
+        font-size: 2rem;
+        margin-bottom: 35px;
+    }
+    
+    .formBottomText{
+        font-size: 1.4rem;
+    }
+    
+    .form{
+        padding: 40px;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        row-gap: 25px;
+    }
+    
+    .formLabelAndInputContainer{
+        gap: 6px;
+    }
+    
+    .areaCodeContainer{
+        width: 35%;
+    }
+    
+    .phoneContainer{
+        width: 60%;
+    }
+    
+    .formSubmitButton{
+        font-size: 1.3rem;
+        padding: 17px;
+        border-radius: 10px;
+        margin-top: 20px;
+    }
+}
+
+@media(width>=992px){
+    .inicioSection{
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .textoContainer{
+        width: 50%;
+        display: flex;
+        align-items: center;
+    }
+    
+    .text, .title{
+        font-size: 2rem;
+    }
+    
+    .title{
+        font-size: 2.2rem;
+    }
+    
+    .formContainer{
+        width: 32%;
+        margin: 0;
+        box-shadow: none;
+    }
+    
+    .formTextContainer{
+        padding: 20px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    
+    .formTopText{
+        font-size: .95rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+    
+    .formBottomText{
+        font-size: .7rem;
+    }
+    
+    .form{
+        padding: 20px;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        row-gap: 15px;
+    }
+    
+    .formLabelAndInputContainer{
+        gap: 3px;
+    }
+    
+    .areaCodeContainer{
+        width: 35%;
+    }
+    
+    .phoneContainer{
+        width: 60%;
+    }
+    
+    .formSubmitButton{
+        font-size: .75rem;
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 20px;
+    }
+}
+
+@media(width>=1200px){
+    .inicioSection{
+        padding: 10px 30px;
+    }
+    
+    .text, .title{
+        font-size: 2.2rem;
+    }
+    
+    .title{
+        font-size: 2.4rem;
+    }
+    
+    .formTextContainer{
+        padding: 25px;
+    }
+    
+    .formTopText{
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+    }
+    
+    .formBottomText{
+        font-size: .9rem;
+    }
+    
+    .form{
+        padding: 25px;
+        row-gap: 20px;
+    }
+    
+    .formSubmitButton{
+        font-size: .95rem;
+        padding: 11px;
+        margin-top: 10px;
+    }
 }
