@@ -1,0 +1,98 @@
+.titleAndSubtitleContainer {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.cardsContainer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+}
+
+.card {
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  width: 85%;
+  text-align: center;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.cardLogo {
+  width: 62px;
+  color: rgb(107, 255, 172);
+  margin-bottom: 15px;
+  border: 3px solid rgb(107, 255, 172);
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.cardText {
+  font-size: 0.85rem;
+}
+
+@media (width >= 768px) {
+  .cardsContainer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: normal;
+    width: 90%;
+    margin: auto;
+    gap: 0;
+    row-gap: 30px;
+  }
+  .card {
+    width: 48%;
+    padding: 25px;
+  }
+  .cardLogo {
+    width: 70px;
+    margin-bottom: 15px;
+  }
+  .cardText {
+    font-size: 1rem;
+  }
+}
+@media (width >= 992px) {
+  .queTeOfrecemosSection {
+    padding: 50px 0;
+  }
+  .cardsContainer {
+    width: 85%;
+    row-gap: 35px;
+  }
+  .card {
+    width: 31%;
+    padding: 25px;
+  }
+  .cardLogo {
+    width: 57px;
+    margin-bottom: 15px;
+  }
+  .cardText {
+    font-size: 0.825rem;
+  }
+}
+@media (width >= 1200px) {
+  .queTeOfrecemosSection {
+    padding: 70px 0;
+  }
+  .titleAndSubtitleContainer {
+    margin-bottom: 60px;
+  }
+  .cardsContainer {
+    width: 88%;
+  }
+  .card {
+    width: 32%;
+    padding: 30px;
+  }
+  .cardLogo {
+    width: 65px;
+    margin-bottom: 20px;
+  }
+  .cardText {
+    font-size: 0.9rem;
+  }
+}/*# sourceMappingURL=QueTeOfrecemos.module.css.map */

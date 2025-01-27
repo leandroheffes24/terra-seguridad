@@ -32,6 +32,18 @@ input:focus{
   outline: 1px solid rgb(35, 90, 209);
 }
 
+h2{
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: rgb(35, 90, 209);
+  margin-bottom: 15px;
+}
+
+h3{
+  font-size: .9rem;
+  font-weight: 600;
+}
+
 @media(width>=768px){
   label{
     font-size: 1.2rem;
@@ -41,6 +53,15 @@ input:focus{
     font-size: 1.2rem;
     padding: 15px;
     border-radius: 10px;
+  }
+
+  h2{
+    font-size: 2.3rem;
+    margin-bottom: 15px;
+  }
+  
+  h3{
+    font-size: 1.1rem;
   }
 }
 
@@ -54,6 +75,15 @@ input:focus{
     padding: 5px;
     border-radius: 5px;
   }
+
+  h2{
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+  }
+  
+  h3{
+    font-size: .9rem;
+  }
 }
 
 @media(width>=1200px){
@@ -64,5 +94,14 @@ input:focus{
   input{
     font-size: .8rem;
     padding: 10px;
+  }
+
+  h2{
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  
+  h3{
+    font-size: .95rem;
   }
 }
