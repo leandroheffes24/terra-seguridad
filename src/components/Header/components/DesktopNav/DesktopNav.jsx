@@ -1,6 +1,7 @@
 import styles from './DesktopNav.module.css'
+import PropTypes from 'prop-types'
 
-export default function DesktopNav(){
+export default function DesktopNav({scrollToSection}){
     return(
         <nav className={styles.desktopNav}>
             <div className={styles.contactSection}>
@@ -9,21 +10,25 @@ export default function DesktopNav(){
 
             <ul className={styles.list}>
                 <li className={styles.itemList}>
-                    <a className={styles.itemLink} href="#">Inicio</a>
+                    <a className={styles.itemLink} href="#inicio" onClick={scrollToSection}>Inicio</a>
                 </li>
                 <li className={styles.itemList}>
-                    <a className={styles.itemLink} href="#">Inicio</a>
+                    <a className={styles.itemLink} href="#que-ofrecemos" onClick={scrollToSection}>¿Qué ofrecemos?</a>
                 </li>
                 <li className={styles.itemList}>
-                    <a className={styles.itemLink} href="#">Inicio</a>
+                    <a className={styles.itemLink} href="#" onClick={scrollToSection}>Inicio</a>
                 </li>
                 <li className={styles.itemList}>
-                    <a className={styles.itemLink} href="#">Inicio</a>
+                    <a className={styles.itemLink} href="#" onClick={scrollToSection}>Inicio</a>
                 </li>
                 <li className={styles.itemList}>
-                    <a className={styles.itemLink} href="#">Inicio</a>
+                    <a className={styles.itemLink} href="#" onClick={scrollToSection}>Inicio</a>
                 </li>
             </ul>
         </nav>
     )
 }
+
+DesktopNav.propTypes = {
+    scrollToSection: PropTypes.func.isRequired
+};

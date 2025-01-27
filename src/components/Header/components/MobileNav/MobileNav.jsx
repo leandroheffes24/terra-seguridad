@@ -1,7 +1,14 @@
 import styles from './MobileNav.module.css'
 import PropTypes from 'prop-types'
 
-export default function Nav({closeMenu}){
+
+export default function Nav({closeMenu, scrollToSection}){
+    const handleLinkClick = (e) => {
+        console.log("event => ", e);
+        closeMenu()
+        scrollToSection(e)
+    }
+
     return(
         <nav className={styles.mobileNav}>
             <div className={styles.closeMenuIconContainer}>
@@ -14,16 +21,16 @@ export default function Nav({closeMenu}){
 
             <ul className={styles.list}>
                 <li className={styles.listItem}>
-                    <a className={styles.itemLink} href="#inicio" onClick={closeMenu}>Inicio</a>
+                    <a className={styles.itemLink} href="#inicio" onClick={handleLinkClick}>Inicio</a>
                 </li>
                 <li className={styles.listItem}>
-                    <a className={styles.itemLink} href="#inicio" onClick={closeMenu}>Inicio</a>
+                    <a className={styles.itemLink} href="#que-ofrecemos" onClick={handleLinkClick}>¿Qué ofrecemos?</a>
                 </li>
                 <li className={styles.listItem}>
-                    <a className={styles.itemLink} href="#inicio" onClick={closeMenu}>Inicio</a>
+                    <a className={styles.itemLink} href="#inicio" onClick={handleLinkClick}>Inicio</a>
                 </li>
                 <li className={styles.listItem}>
-                    <a className={styles.itemLink} href="#inicio" onClick={closeMenu}>Inicio</a>
+                    <a className={styles.itemLink} href="#inicio" onClick={handleLinkClick}>Inicio</a>
                 </li>
             </ul>
 
@@ -37,5 +44,6 @@ export default function Nav({closeMenu}){
 }
 
 Nav.propTypes = {
-    closeMenu: PropTypes.func.isRequired
+    closeMenu: PropTypes.func.isRequired,
+    scrollToSection: PropTypes.func.isRequired
 };

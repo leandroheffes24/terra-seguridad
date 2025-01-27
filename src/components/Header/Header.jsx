@@ -3,6 +3,7 @@ import TerraLogo from '../../assets/blueTerraLogo.webp'
 import Nav from './components/MobileNav/MobileNav'
 import DesktopNav from './components/DesktopNav/DesktopNav'
 import { useState } from 'react'
+import { scrollToSection } from '../../utils/scrollToSection'
 
 export default function Header(){
     const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -28,9 +29,9 @@ export default function Header(){
                     </a>
                 </div>
 
-                {isMenuOpen && <Nav closeMenu={closeMenu}/>}
+                {isMenuOpen && <Nav closeMenu={closeMenu} scrollToSection={scrollToSection}/>}
 
-                <DesktopNav/>
+                <DesktopNav scrollToSection={scrollToSection}/>
             </div>
         </header>
     )

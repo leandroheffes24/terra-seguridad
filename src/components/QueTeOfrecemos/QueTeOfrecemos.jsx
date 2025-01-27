@@ -2,7 +2,7 @@ import styles from './QueTeOfrecemos.module.css'
 
 export default function QueTeOfrecemos(){
     return(
-        <section className={styles.queTeOfrecemosSection}>
+        <section className={styles.queTeOfrecemosSection} id='que-ofrecemos'>
             <div className={styles.titleAndSubtitleContainer}>
                 <h2>¿Qué te ofrece Terra Seguridad?</h2>
                 <h3>Conocé las ventajas que te brindamos para tu seguridad.</h3>

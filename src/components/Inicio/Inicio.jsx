@@ -2,7 +2,7 @@ import styles from './Inicio.module.css'
 
 export default function Inicio(){
     return(
-        <section className={styles.inicioSection}>
+        <section className={styles.inicioSection} id='inicio'>
             <div className={styles.textoContainer}>
                 <p className={styles.text}>PROTEGÉ A TU FAMILIA Y TU HOGAR CON <h1 className={styles.title}>TERRA SEGURIDAD</h1></p>
             </div>
