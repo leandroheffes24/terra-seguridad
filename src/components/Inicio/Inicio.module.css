@@ -92,6 +92,7 @@
 @media (width >= 768px) {
   .inicioSection {
     padding: 40px;
+    margin-bottom: 720px;
   }
   .text, .title {
     font-size: 2rem;
@@ -142,6 +143,7 @@
     padding: 20px;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 0;
   }
   .textoContainer {
     width: 50%;

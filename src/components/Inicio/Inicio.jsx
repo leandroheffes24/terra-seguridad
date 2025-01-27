@@ -31,7 +31,7 @@ export default function Inicio(){
                     </div>
                     <div className={`${styles.formLabelAndInputContainer} ${styles.phoneContainer}`}>
                         <label htmlFor="telefono">Teléfono</label>
-                        <input type="number" id='telefono' name='telefono' placeholder='Nro. de teléfono' required />
+                        <input type="number" id='telefono' name='telefono' placeholder='Ej: 1234-5678' required />
                     </div>
 
                     <button type='submit' className={styles.formSubmitButton}>Solicitar asesoría gratuita</button>
