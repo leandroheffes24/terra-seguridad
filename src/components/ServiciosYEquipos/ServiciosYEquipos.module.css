@@ -57,6 +57,10 @@
   font-size: 0.8rem;
 }
 
+.kitImageAndContactButtonContainer {
+  padding: 0 20px 20px 20px;
+}
+
 .kitImage {
   width: 100%;
   height: 160px;
@@ -109,6 +113,9 @@
   }
   .cardItemList {
     font-size: 1.1rem;
+  }
+  .kitImageAndContactButtonContainer {
+    padding: 0 35px 30px 35px;
   }
   .kitImage {
     height: 270px;

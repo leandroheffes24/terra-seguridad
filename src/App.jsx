@@ -1,4 +1,5 @@
 import './App.css'
+import Contacto from './components/Contacto/Contacto'
 import Footer from './components/Footer/Footer'
 import Header from './components/Header/Header'
 import Inicio from './components/Inicio/Inicio'
@@ -12,6 +13,7 @@ function App() {
       <Inicio/>
       <QueTeOfrecemos/>
       <ServiciosYEquipos/>
+      <Contacto/>
       <Footer/>
     </>
   )
