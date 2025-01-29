@@ -24,10 +24,6 @@
     border-radius: 10px;
 }
 
-.imageContainer{
-
-}
-
 .cardImage{
     width: 100%;
     object-fit: cover;
@@ -62,12 +58,9 @@
     font-size: .8rem;
 }
 
-.kitImageContainer{
-    
-}
-
 .kitImage{
     width: 100%;
+    height: 160px;
     object-fit: cover;
 }
 
@@ -87,4 +80,168 @@
 
 .contactLink{
     color: white;
+}
+
+@media(width>=768px){
+    .serviciosYEquiposSection{
+        padding: 150px 0 80px;
+    }
+
+    .cardsContainer{
+        width: 90%;
+        margin: auto;
+    }
+    
+    .container{
+        width: 80%;
+    }
+    
+    .cardImage{
+        height: 240px;
+    }
+    
+    .infoContainer{
+        padding: 30px 35px;
+        gap: 30px;
+    }
+    
+    .cardTitle{
+        font-size: 1.8rem;
+    }
+    
+    .cardList{
+        gap: 15px;
+        padding-left: 18px;
+    }
+    
+    .cardItemList{
+        font-size: 1.1rem;
+    }
+    
+    .kitImage{
+        height: 270px;
+    }
+    
+    .contactButtonContainer{
+        margin-top: 30px;
+    }
+    
+    .contactButton{
+        font-size: 1.2rem;
+        padding: 15px 60px;
+    }
+}
+
+@media(width>=992px){
+    .serviciosYEquiposSection{
+        padding: 60px 0 80px;
+    }
+
+    .cardsContainer{
+        width: 85%;
+    }
+    
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+    }
+
+    .imageContainer{
+        width: 33%;
+    }
+    
+    .cardImage{
+        height: 240px;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 10px;
+    }
+    
+    .infoContainer{
+        width: 47%;
+        padding: 10px 30px 10px 10px;
+        gap: 12px;
+    }
+    
+    .cardTitle{
+        font-size: .9rem;
+    }
+    
+    .cardList{
+        gap: 8px;
+    }
+    
+    .cardItemList{
+        font-size: .7rem;
+    }
+
+    .kitImageAndContactButtonContainer{
+        width: 20%;
+        padding: 12px 10px 10px 0;
+    }
+    
+    .kitImage{
+        height: 80px;
+    }
+    
+    .contactButtonContainer{
+        margin-top: 40px;
+    }
+    
+    .contactButton{
+        font-size: .75rem;
+        padding: 8px 20px;
+    }
+}
+
+@media(width>=1200px){
+    .serviciosYEquiposSection{
+        padding: 80px 0 80px;
+    }
+
+    .cardsContainer{
+        width: 90%;
+    }
+    
+    .container{
+        width: 92%;
+    }
+    
+    .cardImage{
+        height: 320px;
+    }
+    
+    .infoContainer{
+        padding: 15px 30px 15px 15px;
+        gap: 15px;
+    }
+    
+    .cardTitle{
+        font-size: 1.2rem;
+    }
+    
+    .cardList{
+        gap: 12px;
+    }
+    
+    .cardItemList{
+        font-size: .85rem;
+    }
+
+    .kitImageAndContactButtonContainer{
+        padding: 18px 15px 15px 0;
+    }
+    
+    .kitImage{
+        height: 130px;
+    }
+    
+    .contactButtonContainer{
+        margin-top: 40px;
+    }
+    
+    .contactButton{
+        font-size: .9rem;
+        padding: 12px 30px;
+    }
 }

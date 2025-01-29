@@ -16,13 +16,10 @@ export default function DesktopNav({scrollToSection}){
                     <a className={styles.itemLink} href="#que-ofrecemos" onClick={scrollToSection}>¿Qué ofrecemos?</a>
                 </li>
                 <li className={styles.itemList}>
-                    <a className={styles.itemLink} href="#" onClick={scrollToSection}>Inicio</a>
+                    <a className={styles.itemLink} href="#servicios-y-equipos" onClick={scrollToSection}>Servicios y equipos</a>
                 </li>
                 <li className={styles.itemList}>
-                    <a className={styles.itemLink} href="#" onClick={scrollToSection}>Inicio</a>
-                </li>
-                <li className={styles.itemList}>
-                    <a className={styles.itemLink} href="#" onClick={scrollToSection}>Inicio</a>
+                    <a className={styles.itemLink} href="#contacto" onClick={scrollToSection}>Contacto</a>
                 </li>
             </ul>
         </nav>

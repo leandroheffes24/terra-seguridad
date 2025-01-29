@@ -1,5 +1,6 @@
 import styles from './Footer.module.css'
 import TerraLogo from '../../assets/whiteTerraLogo.webp'
+import {scrollToSection} from '../../utils/scrollToSection'
 
 export default function Footer(){
     return(
@@ -7,11 +8,10 @@ export default function Footer(){
             <div className={styles.footerWebsiteSection}>
                 <p className={styles.footerSectionName}>Explora el sitio web</p>
                 <ul className={styles.footerList}>
-                    <li className={styles.footerListItem}><a className={styles.footerItemLink} href="#">Inicio</a></li>
-                    <li className={styles.footerListItem}><a className={styles.footerItemLink} href="#">Inicio</a></li>
-                    <li className={styles.footerListItem}><a className={styles.footerItemLink} href="#">Inicio</a></li>
-                    <li className={styles.footerListItem}><a className={styles.footerItemLink} href="#">Inicio</a></li>
-                    <li className={styles.footerListItem}><a className={styles.footerItemLink} href="#">Inicio</a></li>
+                    <li className={styles.footerListItem}><a className={styles.footerItemLink} href="#inicio" onClick={scrollToSection}>Inicio</a></li>
+                    <li className={styles.footerListItem}><a className={styles.footerItemLink} href="#que-ofrecemos">¿Qué ofrecemos?</a></li>
+                    <li className={styles.footerListItem}><a className={styles.footerItemLink} href="#servicios-y-equipos">Servicios y equipos</a></li>
+                    <li className={styles.footerListItem}><a className={styles.footerItemLink} href="#contacto">Contacto</a></li>
                 </ul>
             </div>
 

@@ -27,10 +27,10 @@ export default function Nav({closeMenu, scrollToSection}){
                     <a className={styles.itemLink} href="#que-ofrecemos" onClick={handleLinkClick}>¿Qué ofrecemos?</a>
                 </li>
                 <li className={styles.listItem}>
-                    <a className={styles.itemLink} href="#inicio" onClick={handleLinkClick}>Inicio</a>
+                    <a className={styles.itemLink} href="#servicios-y-equipos" onClick={handleLinkClick}>Servicios y equipos</a>
                 </li>
                 <li className={styles.listItem}>
-                    <a className={styles.itemLink} href="#inicio" onClick={handleLinkClick}>Inicio</a>
+                    <a className={styles.itemLink} href="#contacto" onClick={handleLinkClick}>Contacto</a>
                 </li>
             </ul>
 
