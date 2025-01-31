@@ -1,6 +1,41 @@
 import styles from './Contacto.module.css'
+import { useState } from 'react';
 
 export default function Contacto(){
+    const [loading, setLoading] = useState(false);
+    const [message, setMessage] = useState("");
+    const urlScript = import.meta.env.VITE_SCRIPT_URL
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setLoading(true);
+        setMessage("");
+
+        const formData = new FormData(e.target);
+        const data = Object.fromEntries(formData.entries());
+
+        try {
+            const response = await fetch(urlScript, {
+                method: "POST",
+                mode: "no-cors",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data),
+            });
+
+            if (response.ok) {
+                setMessage("✅ Datos enviados correctamente");
+                e.target.reset();
+            } else {
+                setMessage("✅ Datos enviados correctamente");
+
+            }
+        } catch (error) {
+            setMessage("❌ No se pudo conectar con el servidor");
+        } finally {
+            setLoading(false);
+        }
+    };
+
     return(
         <section className={styles.contactSection} id='contacto'>
             <div className={styles.titleAndSubtitleContainer}>
@@ -8,7 +43,7 @@ export default function Contacto(){
                 <h3>Envianos tus datos para que nos comuniquemos con vos</h3>
             </div>
 
-            <form className={styles.form} action="">
+            <form className={styles.form} onSubmit={handleSubmit}>
                 <div className={styles.formTitleContainer}>
                     <h4 className={styles.formTitle}>¡Obtené una asesoría gratis!</h4>
                 </div>
@@ -39,7 +74,11 @@ export default function Contacto(){
                         <input type="number" id='telefonoContacto' name='telefono' placeholder='Ej: 1234-5678' />
                     </div>
 
-                    <button className={styles.submitButton} type='submit'>Enviar</button>
+                    <button className={styles.submitButton} type='submit' disabled={loading}>
+                        {loading ? "Enviando..." : "Solicitar asesoría gratuita"}
+                    </button>
+
+                    {message && <p className={styles.formMessage}>{message}</p>}
                 </div>
             </form>
         </section>

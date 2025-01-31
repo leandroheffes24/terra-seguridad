@@ -1,10 +1,46 @@
 import styles from './Inicio.module.css'
+import { useState } from 'react';
 
-export default function Inicio(){
-    return(
+export default function Inicio() {
+    const [loading, setLoading] = useState(false);
+    const [message, setMessage] = useState("");
+    const urlScript = import.meta.env.VITE_SCRIPT_URL
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setLoading(true);
+        setMessage("");
+
+        const formData = new FormData(e.target);
+        const data = Object.fromEntries(formData.entries());
+
+        try {
+            const response = await fetch(urlScript, {
+                method: "POST",
+                mode: "no-cors",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data),
+            });
+
+            if (response.ok) {
+                setMessage("✅ Datos enviados correctamente");
+                e.target.reset();
+            } else {
+                setMessage("✅ Datos enviados correctamente");
+
+            }
+        } catch (error) {
+            setMessage("❌ No se pudo conectar con el servidor");
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    return (
         <section className={styles.inicioSection} id='inicio'>
             <div className={styles.textoContainer}>
-                <p className={styles.text}>PROTEGÉ A TU FAMILIA Y TU HOGAR CON <h1 className={styles.title}>TERRA SEGURIDAD</h1></p>
+                <p className={styles.text}>PROTEGÉ A TU FAMILIA Y TU HOGAR CON</p>
+                <h1 className={styles.title}>TERRA SEGURIDAD</h1>
             </div>
 
             <div className={styles.formContainer}>
@@ -12,7 +48,7 @@ export default function Inicio(){
                     <p className={styles.formTopText}>ASESORÍA PERSONALIZADA GRATIS</p>
                     <p className={styles.formBottomText}>DESCUBRÍ LO QUE NECESITAS PARA GARANTIZAR SEGURIDAD Y TRANQUILIDAD A TU VIDA.</p>
                 </div>
-                <form className={styles.form} action="">
+                <form className={styles.form} onSubmit={handleSubmit}>
                     <div className={styles.formLabelAndInputContainer}>
                         <label htmlFor="nombre">Nombre</label>
                         <input type="text" id='nombre' name='nombre' placeholder='Tu nombre' required />
@@ -34,9 +70,13 @@ export default function Inicio(){
                         <input type="number" id='telefono' name='telefono' placeholder='Ej: 1234-5678' required />
                     </div>
 
-                    <button type='submit' className={styles.formSubmitButton}>Solicitar asesoría gratuita</button>
+                    <button type='submit' className={styles.formSubmitButton} disabled={loading}>
+                        {loading ? "Enviando..." : "Solicitar asesoría gratuita"}
+                    </button>
+
+                    {message && <p className={styles.formMessage}>{message}</p>}
                 </form>
             </div>
         </section>
-    )
+    );
 }
