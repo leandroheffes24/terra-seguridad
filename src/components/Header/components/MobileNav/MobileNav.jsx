@@ -37,7 +37,7 @@ export default function Nav({closeMenu, scrollToSection}){
             <div className={styles.navSeparator}></div>
 
             <div className={styles.navInformation}>
-                <p>Contacto: <span className={styles.navInformationPhone}>+54 9 11 2490-4560</span></p>
+                <p>Contacto: <span className={styles.navInformationPhone}>+54 9 11 2484-4357</span></p>
             </div>
         </nav>
     )

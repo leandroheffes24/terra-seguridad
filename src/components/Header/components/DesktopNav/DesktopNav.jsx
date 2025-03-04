@@ -5,7 +5,7 @@ export default function DesktopNav({scrollToSection}){
     return(
         <nav className={styles.desktopNav}>
             <div className={styles.contactSection}>
-                <p className={styles.contactText}>CONTACTO: <span className={styles.contactPhone}>+54 9 11 2490-4560</span></p>
+                <p className={styles.contactText}>CONTACTO: <span className={styles.contactPhone}>+54 9 11 2484-4357</span></p>
             </div>
 
             <ul className={styles.list}>
